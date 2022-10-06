@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TestWebArchi.Data.DTOs;
 
 namespace TestWebArchi.Data.DbContexts
 {
@@ -9,5 +10,7 @@ namespace TestWebArchi.Data.DbContexts
             : base(options)
         {
         }
+
+        public DbSet<ShoppingCart>? ShoppingCart { get; set; }
     }
 }
