@@ -6,7 +6,8 @@ namespace TestWebArchi.Data.DTOs
     public class ApplicationUser : IdentityUser
     {
         [PersonalData]
-        [Column(TypeName = "varchar(100)")]
-        public string? Age { get; set; }
+        [ForeignKey("ShoppingCart")]
+        public Guid ShoppingCart_Id { get; set; }
+        public ShoppingCart? ShoppingCart { get; set; }
     }
 }
